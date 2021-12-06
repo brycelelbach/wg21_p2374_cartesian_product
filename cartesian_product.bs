@@ -15,6 +15,10 @@ Abstract: This paper proposes std::ranges::cartesian_product_view for taking the
 
 # Changelog
 
+## Changes from r2
+
+- Make the size and difference types implementation-defined and only recommend requirements for them.
+
 ## Changes from r1
 
 - Add wording adding `cartesian_product_view` into the synopsis of `<ranges>`
@@ -370,7 +374,9 @@ constexpr *see below* size() const
   requires cartesian-product-is-sized<const First, const Vs...>;
 ```
 
-> The return type is the smallest unsigned-integer-like type that is sufficiently wide to store the product of the maximum sizes of all underlying ranges. If there is no such type, the type is an implementation-defined unsigned-integer-like type.
+> The return type is an implementation-defined unsigned-integer-like type.
+
+> *Recommended practice:* The return type should be the smallest unsigned-integer-like type that is sufficiently wide to store the product of the maximum sizes of all underlying ranges. If there is no such type, the type is an implementation-defined unsigned-integer-like type.
 
 > *Effects*: Returns the product of the size of all ranges in `bases_`.
 
@@ -494,7 +500,9 @@ public:
 - Otherwise, if `First` models `forward_range`, then `iterator_concept` denotes `forward_iterator_tag`.
 - Otherwise, `iterator_concept` denotes `input_iterator_tag`.
 
-`iterator::difference_type` is the smallest signed-integer-like type that is sufficiently wide to store the product of the maximum sizes of all underlying ranges. If there is no such type, the type is an implementation-defined signed-integer-like type.
+`iterator::difference_type` is an implementation-defined signed-integer-like type.
+
+*Recommended practice:* `iterator::difference_type` should be the smallest signed-integer-like type that is sufficiently wide to store the product of the maximum sizes of all underlying ranges. If there is no such type, the type is an implementation-defined signed-integer-like type.
 
 ```
 template <size_t N = sizeof...(Vs)>
