@@ -1,9 +1,9 @@
 <pre class='metadata'>
 Title: views::cartesian_product
-Status: P
-Level: 2
+Status: D
+Level: 3
 ED: http://wg21.link/P2374
-Shortname: P2374
+Shortname: D2374
 Editor: Sy Brand, sy.brand at microsoft dot com
 Editor: Michał Dominiak, griwes at griwes dot info
 Group: wg21
