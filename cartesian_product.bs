@@ -1,10 +1,10 @@
 <pre class='metadata'>
 Title: `views::cartesian_product`
 H1: <code>views::cartesian_product</code>
-Status: P
-Level: 3
+Status: D
+Level: 4
 ED: http://wg21.link/P2374
-Shortname: P2374
+Shortname: D2374
 Editor: Sy Brand, sy.brand at microsoft dot com
 Editor: Michał Dominiak, griwes at griwes dot info
 Group: wg21
