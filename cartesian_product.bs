@@ -177,7 +177,7 @@ Add the following to 24.2 [ranges.syn], Header `<ranges>` synopsis:
 
 ```
 // ...
-namespace std:;ranges {
+namespace std::ranges {
     // ...
 
     // [range.cartesian], cartesian product view
